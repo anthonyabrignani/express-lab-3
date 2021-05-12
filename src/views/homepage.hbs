@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grand Circus Assignments</title>
+	<link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+	<h1>Assignments</h1>
+    <table>
+		<thead>
+			<tr>
+				<th>Assignment</th>
+				<th>Score</th>
+                <th>Total</th>
+                <th>Completed</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+            	{{#each assignments}}
+			<tr>
+                <td>{{assignments}}</td>
+				<td>{{score}}</td>
+				<td>{{total}}</td>
+                <td>{{completed}}</td>
+				<td>
+					<a href="/assignments/{{id}}/edit">Edit</a>
+					<a href="/assignments/{{id}}/delete">Delete</a>
+				</td>
+			</tr>
+		{{/each}}
+        </tbody>
+    </table>
+        <h3>Overall Average:{{average}}%</h3>
+        <a href="/assignments/{{id}}/add">Add an Assignment</a>
+</body>
+
+</html>

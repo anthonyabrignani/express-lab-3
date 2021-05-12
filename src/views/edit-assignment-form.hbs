@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Player</title>
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+	<h1>Edit Assignment</h1>
+	<form action="/assignments/{{assignment.id}}/edit-submit" method="post">
+	<p>
+	<label for="assignments">Assignment Name</label>
+	<input type="text" id="assignments" name="assignments" value="{{assignments.assignments}}" required>
+	</p>
+	<p>
+	<label for="score">Your Score</label>
+	<input type="number" id="score" name="score" value="{{assignments.score}}" step="1" min="0" required>
+	</p>
+    <label for="total">Total Possible Score</label>
+	<input type="number" id="total" name="total" value="{{assignments.total}}" step="1" min="0" required>
+	</p>
+    <label for="completed">Have you completed this assignment?</label>
+	<input type="checkbox" id="completed" name="completed" value="{{assignments.completed}}" >
+	</p>
+	<button type="submit">Save</button>
+	<a href="/">Never Mind</a>
+	</form>
+</body>
+</html>

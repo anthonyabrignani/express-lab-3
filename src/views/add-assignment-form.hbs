@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Assignment</title>
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+	<h1>Add an Assignment</h1>
+	
+	<form action="/assignments/add-submit" method="post">
+		<p>
+			<label for="assignments">Assignment Name</label>
+			<input name="assignments" id="assignments" required />
+		</p>
+		<p>
+			<label for="score">Your Score</label>
+			<input name="score" id="score" type="number" step="1" min="0" />
+		</p>
+        <p>
+			<label for="total">Total Possible Score</label>
+			<input name="total" id="total" type="number" step="1" min="0" />
+		</p>
+        <p>
+			<label for="completed">Have you completed this assignment?</label>
+			<input name="completed" id="completed" type="checkbox" />
+		</p>
+		<p>
+			<input type="submit" value="Add" />
+			<a href="/">Never Mind</a>
+		</p>
+	</form>
+</body>
+</html>

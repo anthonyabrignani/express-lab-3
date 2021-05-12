@@ -1,0 +1,6 @@
+{
+    "execMap": {
+      "ts": "./node_modules/.bin/ts-node"
+    }
+  }
+  
